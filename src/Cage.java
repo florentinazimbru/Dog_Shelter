@@ -1,11 +1,9 @@
 
 public class Cage {
-	int cageID;
+	int cageID;		// store the cageID
 	int dogID;		// store the dogID if is not empty, otherwise 0
 	boolean clean_flag;	// true if cage is clean, otherwise false
 	String size;		// size of the cage
-	
-	
 	
 	public Cage (){
 		super();

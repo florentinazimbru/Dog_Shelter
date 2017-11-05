@@ -1,19 +1,17 @@
 import java.util.ArrayList;
 import java.util.Scanner;
-
-
 import java.util.List;
-
 
 public class Shelter {
 	
+	private static final Scanner SCANNER = new Scanner(System.in);
 	String Name;	//Shelter name 
 	List<Cage> cages =new ArrayList<Cage>(); 	// Cages Array, will store all the Cages form the Shelter
 	
 	public Shelter() {
 		super();
 		System.out.println("Enter a shelter name"); 
-		this.Name =new Scanner(System.in).next();
+		this.Name =SCANNER.next();
 		this.cages = null;
 	}
 
@@ -40,7 +38,7 @@ public class Shelter {
 	
 	public void addCage() {
 		System.out.println("Please insert a cage Id");
-		int cageIdInput = new Scanner(System.in).nextInt(); //input cage id	
+		int cageIdInput = SCANNER.nextInt(); //input cage id	
 		if(this.cages == null)
 		{
 		
@@ -66,15 +64,5 @@ public class Shelter {
 			}
 		}
 		
-	}
-	public void metoda(int i) {
-		int k;
-		if(i==0){
-			int j=0;
-		}
-		else
-		{
-			
-		}
 	}
 }
