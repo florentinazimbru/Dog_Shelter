@@ -1,4 +1,3 @@
-
 public class Main {
 
 	public static void main(String[] args) {
@@ -7,8 +6,10 @@ public class Main {
 		s1.addCage();
 		s1.addCage();
 		s1.addCage();
+
+		//s1.removeCage(1);
+		s1.addCagePosition(2);
 		s1.printShelter();
-		s1.removeCage(1);
 		
 }
 }

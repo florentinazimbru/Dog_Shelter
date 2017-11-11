@@ -41,8 +41,6 @@ public class Shelter {
 		int cageIdInput = SCANNER.nextInt(); //input cage id	
 		if(this.cages == null)
 		{
-		
-	
 			this.cages = new ArrayList<Cage>();
 			this.cages.add(new Cage(cageIdInput,0,false,"large"));
 		}
@@ -51,7 +49,19 @@ public class Shelter {
 			this.cages.add(new Cage(cageIdInput, 0,false,"large")); // add a new cage to cages list	
 		}
 		System.out.println("New cage added at cages list");
-		
+	}
+	
+	public void addCagePosition(int newPos) {
+		System.out.println("Please insert a cage Id");
+		int cageIdInput = SCANNER.nextInt(); //input cage id
+		if (newPos < this.cages.size()){
+			this.cages.add(newPos, new Cage(cageIdInput, 0, false, "large"));
+		}
+		else{
+			this.cages.add(new Cage(cageIdInput, 0, false, "large"));
+			
+		}
+		System.out.println("You have added a new cage at position: " + newPos);
 	}
 	
 	public void removeCage(int cageId){
@@ -60,7 +70,6 @@ public class Shelter {
 			if (this.cages.get(i).cageID == cageId){
 				System.out.println("You want to delete cage: " + this.cages.get(i).cageID );
 				this.cages.remove(this.cages.get(i));
-			
 			}
 		}
 		
